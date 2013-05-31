@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Backbone test</title>
+
+    <script src='vendor/js/jquery-2.0.2.min.js'></script>
+    <script src='vendor/js/underscore-min.js'></script>
+    <script src='vendor/js/backbone-min.js'></script>
+    <script src='vendor/js/bootstrap.min.js'></script>
+    <script src='vendor/js/leaflet.js'></script>
+  </head>
+
+  <body>
+  <script type='text/template' id='target_template'>
+    <h1>I AM A TABLE!!!</h1>
+  </script>
+
+  <div id='target'></div>
+
+  <script type='text/javascript'>
+    TargetView = Backbone.View.extend({
+      initialize: function() { this.render(); },
+      render: function() {
+        var template = _.template( $("#target_template").html(), {} );
+        this.$el.html( template );
+      }
+    });
+
+    var target_view = new TargetView({ el: $("#target") });
+  </script>
+  </body>
+</html>

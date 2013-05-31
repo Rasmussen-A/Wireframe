@@ -12,21 +12,22 @@
     <!-- Local css -->
     <link href='css/skeleton.css' rel='stylesheet'>
 
-    <!-- Scripts -->
-    <script src='vendor/js/jquery.js'></script>
+    <!-- Scripts, order make sense -->
+    <script src='vendor/js/jquery-2.0.2.min.js'></script>
+    <script src='vendor/js/underscore-min.js'></script>
+    <script src='vendor/js/backbone-min.js'></script>
     <script src='vendor/js/bootstrap.min.js'></script>
     <script src='vendor/js/leaflet.js'></script>
-    <script src='vendor/js/backbone-min.js'></script>
-    <script src='vendor/js/underscore-min.js'></script>
   </head>
 
   <body>
     <div class='row-fluid fill'>
 
       <div class='span9 right_line fill'>
-        <div id='map'>
-          <!-- Place a map here -->
-        </div>
+        <script type="text/template" id="map_template">
+          <p>Leaflet with Backbone.</p>
+        </script>
+        <div id="map"></div>
       </div>
 
       <div class='span3 fill' id='filters'>
