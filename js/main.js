@@ -1,10 +1,12 @@
-///main.js - require.js config file
+// main.js - require.js config file
 
 require.config({
   paths: {
     jquery: '../vendor/js/jquery',
     underscore: '../vendor/js/underscore',
     backbone: '../vendor/js/backbone',
+    bootstrap: '../vendor/js/bootstrap',
+    leaflet: '../vendor/js/leaflet',
     templates: '../templates'
   },
   shim: {
@@ -15,7 +17,8 @@ require.config({
       exports: 'Backbone' },
     bootstrap: {
       deps: ['jquery'],
-      exports: 'Bootstrap' }
+      exports: 'Bootstrap' },
+    leaflet: { exports: 'L' }
   }
 });
 

@@ -9,11 +9,11 @@ define(['jquery',
     var Controller = Backbone.Router.extend({
       routes: {
         "": "map",
-        "/map": "map"
+        "!/map": "map"
       },
       map: function() {
         var view = new mapView.View()
-        view.render()
+        view.render(59.94, 30.30, 11)
       }
     })
 

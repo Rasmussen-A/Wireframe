@@ -2,15 +2,16 @@
 
 define(['jquery',
         'underscore',
-        'backbone',],
-  function($, _, Backbone){
+        'backbone',
+        'lib/leafletMapProvider'],
+  function($, _, Backbone, leafletMapProvider){
     var View = Backbone.View.extend({
       el: $("#map"),
-      render: function() {
-        $('#map').append('View is ready!')
+      render: function(lat, lon, zoom) {
+        var mainLayer = new leafletMapProvider.MainLayer(this.el, lat, lon, zoom)
       }
     })
 
-    return { View: View }
+    return {View: View}
   }
 )
