@@ -1,5 +1,10 @@
-html, body, #filters {
+html, body {
   height: 100%;
+  background-color: #E1E5F6;
+}
+
+#head-nav a, #type a {
+  outline: none;
 }
 
 #map {
@@ -12,7 +17,28 @@ html, body, #filters {
   position: absolute;
   top: 60px;
   bottom: 20px;
-  width: 940px;
-  margin-left: -470px;
+  width: 96%;
+  margin-left: -48%;
   left: 50%;
+}
+
+#filters {
+  height: 100%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+#type {
+  width: 100%;
+  border-bottom: 1px solid rgb(227, 227, 227);
+}
+
+#type li {
+  width: 33.16215%;
+  text-align: center;
+}
+
+#middle {
+  border-left: 1px solid rgb(227, 227, 227);
+  border-right: 1px solid rgb(227, 227, 227);
 }
