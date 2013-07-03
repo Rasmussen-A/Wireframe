@@ -3,7 +3,7 @@ html, body {
   background-color: #E1E5F6;
 }
 
-#head-nav a, #type a {
+#head-nav a, #type a, .brand a {
   outline: none;
 }
 
@@ -38,7 +38,7 @@ html, body {
   text-align: center;
 }
 
-#middle {
+#pedestrian {
   border-left: 1px solid rgb(227, 227, 227);
   border-right: 1px solid rgb(227, 227, 227);
 }
