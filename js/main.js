@@ -7,6 +7,7 @@ require.config({
     backbone: '../vendor/js/backbone',
     bootstrap: '../vendor/js/bootstrap',
     leaflet: '../vendor/js/leaflet',
+    jqueryui: '../vendor/js/jquery-ui',
     templates: '../templates'
   },
   shim: {
@@ -15,9 +16,6 @@ require.config({
     backbone: {
       deps: ['jquery', 'underscore'],
       exports: 'Backbone' },
-    bootstrap: {
-      deps: ['jquery'],
-      exports: 'Bootstrap' },
     leaflet: { exports: 'L' }
   }
 });

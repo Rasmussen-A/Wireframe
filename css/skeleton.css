@@ -3,7 +3,7 @@ html, body {
   background-color: #E1E5F6;
 }
 
-#head-nav a, #type a, .brand a {
+#head-nav a, #type a, .brand {
   outline: none;
 }
 

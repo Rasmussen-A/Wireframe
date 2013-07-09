@@ -14,19 +14,22 @@ define(['jquery',
         "!/map/:section": "map"
       },
 
-      map: function(section) {
-        // TODO - find some methods to exec that actions
-        // each time when this router called
-        $('#head-nav li').removeClass('active')
-          $('#common-map').addClass('active')
-        // TODO - also mapView brokes navigation
+      initialize: function() {
         //var view = new mapView.View()
         //  view.render(59.94, 30.30, 11)
+      },
+
+      map: function(section) {
+        $('#head-nav li').removeClass('active')
+          $('#common-map').addClass('active')
 
         // Define a default action if no section given
         if (section === undefined) section = 'vechicular'
+
+        // Render v/p/c selector in filters block
         var selector = new filtersView.Selector()
           selector.render()
+
         $('#type li').removeClass('active')
           $("#" + section).addClass('active')
       }
