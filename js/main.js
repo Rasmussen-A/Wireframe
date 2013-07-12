@@ -20,7 +20,6 @@ require.config({
   }
 });
 
-// App module is entire app logic
 require(['app'], function(App){
   //call app.js
 })
