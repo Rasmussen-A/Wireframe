@@ -15,8 +15,8 @@ define(['jquery',
       },
 
       initialize: function() {
-        //var view = new mapView.View()
-        //  view.render(59.94, 30.30, 11)
+        var view = new mapView.View()
+          view.render(59.94, 30.30, 11)
       },
 
       map: function(section) {
@@ -29,6 +29,8 @@ define(['jquery',
         // Render v/p/c selector in filters block
         var selector = new filtersView.Selector()
           selector.render()
+        var list = new filtersView.List()
+          list.render()
 
         $('#type li').removeClass('active')
           $("#" + section).addClass('active')

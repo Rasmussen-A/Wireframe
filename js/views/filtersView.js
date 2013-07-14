@@ -4,15 +4,17 @@ define(['jquery',
         'underscore',
         'backbone',
         'text!templates/selectorTemplate.html',
+        'text!templates/listTemplate.html',
         'jqueryui'],
-  function($, _, Backbone, selectorTemplate) {
+  function($, _, Backbone, selectorTemplate, listTemplate) {
 
     var Selector = Backbone.View.extend({
       el: $('#filters'),
       template: _.template(selectorTemplate),
 
+      initialize: function() { this.$el.html(this.template()) },
+
       render: function() {
-        this.$el.html(this.template())
         // TODO - set min and max depends on current hour
         // Do ir throught model or something, not here
         $('#trackbar').slider({
@@ -27,9 +29,23 @@ define(['jquery',
         })
         $('#start-hour').html($('#trackbar').slider("values", 0))
         $('#end-hour').html($('#trackbar').slider("values", 1))
+
       }
     })
 
-    return {Selector: Selector}
+    var List = Backbone.View.extend({
+      el: $('#filters'),
+      template: _.template(listTemplate),
+
+      render: function() {
+        // TODO - this wouldn't rendering. Why?
+        this.$el.append(this.template())
+      }
+    })
+
+    return {
+      Selector: Selector,
+      List: List
+    }
   }
 )
