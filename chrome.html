@@ -50,7 +50,7 @@
                   <a href='#!/map/pedestrian'>Pedestrian</a>
                 </li>
 
-                <li id='cycle'>
+                <li id='cycle' class='active'>
                   <a href='#!/map/cycle'>Cycle</a>
                 </li>
 
@@ -70,7 +70,41 @@
               </tr>
             </table>
 
+            <script type='text/javascript'>
+              $('#trackbar').slider({
+                range: true,
+                min: 0,
+                max: 23,
+                values: [0, 2],
+                slide: function(event, ui) {
+                  $('#start-hour').html(ui.values[0])
+                  $('#end-hour').html(ui.values[1])
+                }
+              })
+              $('#start-hour').html($('#trackbar').slider("values", 0))
+              $('#end-hour').html($('#trackbar').slider("values", 1))
+            </script>
+
           </div>
+
+          <div id='list'>
+            <table class='table table-hover'>
+              <tbody>
+
+                <tr>
+                  <td>one</td>
+                  <td>two</td>
+                </tr>
+
+                <tr>
+                  <td>one</td>
+                  <td>two</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
     </div>

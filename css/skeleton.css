@@ -38,7 +38,7 @@ html, body { height: 100%; background-color: #E1E5F6; }
 }
 
 #slider {
-   height: 40px;
+  height: 40px;
   display: table; width: 100%;
   border-bottom: 1px solid rgb(227, 227, 227);
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
@@ -49,14 +49,14 @@ html, body { height: 100%; background-color: #E1E5F6; }
   border: 0; font-weight: bold;
 }
 
-.time {
-   width: 40px;
-   vertical-align: middle;
-}
+.time { width: 40px; }
 
 #list {
   position: absolute;
+  width: inherit;
   top: 82px;
   bottom: 0px;
   overflow: auto;
 }
+
+#slider table tr { vertical-align: middle; height: 40px; }
