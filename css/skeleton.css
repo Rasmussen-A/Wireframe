@@ -54,6 +54,7 @@ html, body { height: 100%; background-color: #E1E5F6; }
 #list {
   position: absolute;
   width: inherit;
+  /* Navbar + Slider + 2 borders = 40+40+2 (px) */
   top: 82px;
   bottom: 0px;
   overflow: auto;
