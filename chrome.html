@@ -35,7 +35,21 @@
 
     <div class='container-fluid'>
       <div id='wrapper' class='row-fluid'>
-        <div id='map' class='well span7'></div>
+
+        <div id='map-wrapper' class='well span7'>
+
+          <div id='searchbox'>
+            <form class='form-search'>
+              <fieldset>
+                <input type='text' class="input-medium search-query" placeholder='Поиск по адресу...'>
+                <button type='submit' class='btn'>Поиск</button>
+              </fieldset>
+            </form>
+          </div>
+
+          <div id='map'></div>
+
+        </div>
 
         <div id='filters' class='well span5'>
           <div class='navbar'>

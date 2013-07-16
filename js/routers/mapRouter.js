@@ -15,7 +15,9 @@ define(['jquery',
       },
 
       initialize: function() {
-        var view = new mapView.View()
+        var searchBox = new mapView.SearchBox()
+          searchBox.render()
+        var view = new mapView.Map()
           view.render(59.94, 30.30, 11)
       },
 
