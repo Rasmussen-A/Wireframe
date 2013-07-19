@@ -8,11 +8,13 @@ html, body { height: 100%; background-color: #E1E5F6; }
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
-#map { 
+#map {
     height: 100%;
     position: relative;
     height: 100%;
     z-index: 0;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 4px 4px 4px 4px;
 }
 
 #searchbox { 
@@ -25,6 +27,9 @@ html, body { height: 100%; background-color: #E1E5F6; }
 
 #searchbox input, #searchbox button { box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6); }
 #searchbox input { width: 250px; }
+
+/* Remove a dotted border around button in FF */
+#searchbox button { outline: none; }
 
 /* Wrapper includes map and filters divs
    This trick is aligning wrapper in center */
