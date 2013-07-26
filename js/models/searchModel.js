@@ -4,7 +4,11 @@ define(['jquery', 'underscore', 'backbone'],
   function($, _, Backbone) {
     var SearchBox = Backbone.Model.extend({
       server: "http://nominatim.openstreetmap.org/search?q=",
+<<<<<<< HEAD
       params: "&accept-language=ru&format=json",
+=======
+      params: "&format=json",
+>>>>>>> LeaFlet
 
       find: function(query) {
         // TODO - query validation?
