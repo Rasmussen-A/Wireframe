@@ -1,4 +1,4 @@
-html, body { height: 100%; background-color: #E1E5F6; }
+html, body { height: 100%; background-color: #E1E5F6;  }
 
 /* Hide frames around links on top menu */
 #head-nav a, #type a, .brand { outline: none; }
@@ -52,15 +52,11 @@ html, body { height: 100%; background-color: #E1E5F6; }
 /* Selector and trackbar rules */
 #type {
   width: 100%;
+  padding-left: 1px;
   border-bottom: 1px solid rgb(227, 227, 227);
 }
 
-#type li { width: 33.161%; text-align: center; }
-
-#pedestrian {
-  border-left: 1px solid rgb(227, 227, 227);
-  border-right: 1px solid rgb(227, 227, 227);
-}
+#type li { width: 33.3%; text-align: center; }
 
 #slider {
   height: 40px;
