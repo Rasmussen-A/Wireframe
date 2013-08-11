@@ -3,10 +3,11 @@
 define(['jquery',
         'underscore',
         'backbone',
+        'views/resultView',
         'models/searchModel',
         'lib/leafletMapProvider',
         'text!templates/searchTemplate.html'],
-  function($, _, Backbone, SearchModel, leafletMapProvider, searchTemplate){
+  function($, _, Backbone, ResultView, SearchModel, leafletMapProvider, searchTemplate){
     var SearchBox = Backbone.View.extend({
       el: $('#searchbox'),
       template: _.template(searchTemplate),
@@ -17,11 +18,14 @@ define(['jquery',
         //this.$("input[name='search']").val()
         this.model = new SearchModel.SearchBox()
         var response = this.model.find(this.$('input').val())
-        alert(response.length)
         // Clear filters div
         // Render results template inside it
         // Smth like $().html(_.template(resultsTemplate, results: this.model.find()))
         // Or even better to create standalone view for this, yeah
+        if (response.length != 0) {
+          var list = new ResultView.List
+          list.render(response) }
+            else alert("Не могу найти это место!")
       },
 
       searchOnEnter: function(e) {
@@ -36,7 +40,7 @@ define(['jquery',
     })
 
     var Map = Backbone.View.extend({
-      el: $('#map'),
+      el: leafletMapProvider.el,
       render: function(lat, lon, zoom) {
         var mainLayer = new leafletMapProvider.MainLayer(this.el, lat, lon, zoom)
       }

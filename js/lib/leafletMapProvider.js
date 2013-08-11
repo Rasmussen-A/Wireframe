@@ -2,6 +2,8 @@
 
 define(['jquery', 'leaflet'],
   function($, L) {
+    var el = $('#map')
+
     var MainLayer = function(element, latitude, longitude, zoom) {
       // create a map in the "map" div, set the view to a given place and zoom
       var map = L.map(element).setView([latitude, longitude], zoom);
@@ -12,6 +14,9 @@ define(['jquery', 'leaflet'],
       }).addTo(map);
     }
 
-    return {MainLayer: MainLayer}
+    return {
+      MainLayer: MainLayer,
+      el: el
+    }
   }
 )

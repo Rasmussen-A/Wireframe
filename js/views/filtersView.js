@@ -20,7 +20,7 @@ define(['jquery',
         $('#trackbar').slider({
           range: true,
           min: 0,
-          max: 23,
+          max: 16,
           values: [0, 2],
           slide: function(event, ui) {
             $('#start-hour').html(ui.values[0])
