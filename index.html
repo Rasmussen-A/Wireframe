@@ -19,27 +19,25 @@
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">CityStop</a>
-            <ul id='head-nav' class="nav">
-              <li id='common-map'><a href="#!/map">Карта</a></li>
-              <li id='itineraries'><a href="#!/itineraries"> Мои маршруты</a></li>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+          <a class="navbar-brand" href="#">CityStop</a>
+            <ul id='head-nav' class="nav navbar-nav">
+              <li id='common-map'><a href="#!/map" class="navbar-link">Карта</a></li>
+              <li id='itineraries'><a href="#!/itineraries" class="navbar-link"> Мои маршруты</a></li>
             </ul>
             <p class="navbar-text pull-right">Имярек</p>
-        </div>
       </div>
-    </div><!-- nav-collapse -->
+    </nav><!-- nav-collapse -->
 
     <div class='container'>
       <div id='wrapper' class='row'>
-        <div id='map-wrapper' class='well span7'>
+        <div id='map-wrapper' class='well col-md-7'>
           <div id='searchbox'></div>
           <div id='map'></div>
         </div>
 
-        <div id='filters' class='well span5'></div>
+        <div id='filters' class='well col-md-5'></div>
       </div>
     </div>
   </body>

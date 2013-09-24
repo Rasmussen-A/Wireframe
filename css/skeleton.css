@@ -1,12 +1,9 @@
-html, body { height: 100%; background-color: #E1E5F6;  }
+html, body { height: 100%; background-color: #E7E7E7 }
 
 /* Hide frames around links on top menu */
 #head-nav a, #type a, .brand { outline: none; }
 
-#map-wrapper {
-  padding: 0; height: 100%;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-}
+#map-wrapper { padding: 0; height: 100%; }
 
 #map {
     height: 100%;
@@ -25,7 +22,7 @@ html, body { height: 100%; background-color: #E1E5F6;  }
 }
 
 #searchbox input, #searchbox button { 
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
     border-radius: 0;
 }
 #searchbox input { width: 250px; }
@@ -39,21 +36,31 @@ html, body { height: 100%; background-color: #E1E5F6;  }
   position: absolute;
   top: 60px;
   bottom: 20px;
+  width: 960px;
+  margin-left: -480px;
+  left: 50%;
 }
 
-#filters {
-  height: 100%; padding: 0;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-}
+.nav-pills li a, .well, .navbar { border-radius: 0 !important; }
+
+#filters { height: 100%; padding: 0; }
 
 /* Selector and trackbar rules */
-#type {
-  width: 100%;
-  padding-left: 1px;
-  border-bottom: 1px solid rgb(227, 227, 227);
+#type { width: 100%; }
+
+#type li { width: 32.9957%; text-align: center; font-weight: bold; }
+
+.ui-slider-range { background-color: #428BCA }
+.ui-slider-handle, .ui-state-focus {
+  /*background: #92CAF7 !important;
+  border: #428BCA !important;*/
+  outline: none !important;
 }
 
-#type li { width: 33.3%; text-align: center; }
+.navbar {
+  min-height: 40px !important;
+  margin-bottom: 0px !important;
+}
 
 #slider {
   height: 40px;
@@ -76,6 +83,11 @@ html, body { height: 100%; background-color: #E1E5F6;  }
   top: 82px;
   bottom: 0px;
   overflow: auto;
+  width: 100%;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: white;
 }
 
 #slider table tr { vertical-align: middle; height: 40px; }
