@@ -41,6 +41,8 @@ html, body { height: 100%; background-color: #E7E7E7 }
   left: 50%;
 }
 
+.container { max-width: 960px !important }
+
 .nav-pills li a, .well, .navbar { border-radius: 0 !important; }
 
 #filters { height: 100%; padding: 0; }
@@ -48,7 +50,7 @@ html, body { height: 100%; background-color: #E7E7E7 }
 /* Selector and trackbar rules */
 #type { width: 100%; }
 
-#type li { width: 32.9957%; text-align: center; font-weight: bold; }
+#type li { text-align: center; font-weight: bold; }
 
 .ui-slider-range { background-color: #428BCA }
 .ui-slider-handle, .ui-state-focus {
